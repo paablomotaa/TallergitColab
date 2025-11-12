@@ -1,7 +1,14 @@
-#include <stdio.h>
+#include <unistd.h>
 
-int	main(void)
+int	ft_putstr(char *c)
 {
-	printf("Hola Mundo!");
-	return (0);
+	int i;
+
+	i = 0;
+	while(c[i])
+	{
+		write(1, &c, 1);
+		i++;
+	}
+	return i;
 }
